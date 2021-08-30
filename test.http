@@ -1,0 +1,17 @@
+#
+POST https://registre.fmasantcugat.org/registre/qr
+Content-Type: application/x-www-form-urlencoded
+nom=Albert&cognoms=Amb%20Cognoms&telefon=12345678
+#
+#
+POST https://registre.fmasantcugat.org/registre/login
+Content-Type: application/x-www-form-urlencoded
+user=user&password=password
+#
+
+#
+GET http://localhost:5000/benvingut?data=eyJub20iOiAiTWFyYyIsICJ0ZWxlZm9uIjogIjYzMzE4MDMwNSIsICJjb2dub21zIjogIlNhc3RyZSBSaWVuaXR6In0%3D
+
+
+#
+POST https://registre.fmasantcugat.org/registre/setup

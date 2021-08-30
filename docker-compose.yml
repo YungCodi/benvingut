@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: db
+      MYSQL_USER: usera
+      MYSQL_PASSWORD: userpw
+
+  api:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    environment:
+      AUTH_USER: yung
+      AUTH_PASSWORD: yung
+      AUTH_SECRET: 12345
+      HOST_URL: http://skaftafell:5000
+      DB_HOST: db
+      DB_USER: user
+      DB_PASSWORD: userpw
+      DB_NAME: db
+    ports:
+      - 5000:5000
